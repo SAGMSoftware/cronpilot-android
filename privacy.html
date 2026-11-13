@@ -1,55 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CronPilot privacy policy by SAGM Software">
-<title>CronPilot – Privacy Policy | SAGM Software</title>
-<style>
-:root { color-scheme: dark light; }
-* { box-sizing: border-box; }
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.75;
-       max-width: 850px; margin: 0 auto; padding: 24px 22px 70px;
-       background: #101925; color: #edf4fc; }
-h1, h2 { line-height: 1.3; color: #c3e6ff; }
-h1 { font-size: 2.1rem; margin-top: 0; padding-bottom: 15px; border-bottom: 1px solid #365269; }
-h2 { font-size: 1.24rem; margin-top: 34px; }
-a { color: #8fe3fa; overflow-wrap: anywhere; }
-strong { color: #fff; }
-p { margin: 12px 0; }
-@media (prefers-color-scheme: light) {
- body { background: #fff; color: #1a2935; }
- h1,h2 { color: #15486c; }
- a { color: #005d8a; }
- strong { color: #132c3d; }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="CronPilot privacy policy by SAGM Software: location, GPX export, NAV updates, SIM connection and data-protection rights.">
+  <title>CronPilot – Privacy Policy | SAGM Software</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { box-sizing: border-box; max-width: 880px; margin: 0 auto; padding: 24px 22px 60px; background: #101925; color: #edf4fc; font: 16px/1.72 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    h1, h2 { color: #bbdbfa; line-height: 1.28; }
+    h1 { font-size: clamp(1.65rem, 4vw, 2.25rem); margin-top: .7em; }
+    h2 { margin-top: 1.8em; font-size: 1.3rem; }
+    p, li { overflow-wrap: anywhere; }
+    a { color: #91dcf6; text-underline-offset: .15em; }
+    a:focus-visible { outline: 2px solid #91dcf6; outline-offset: 3px; }
+    strong { color: #f4f9fd; }
+    ul { padding-left: 1.6em; }
+    li { margin: .55em 0; }
+    h1 + p { border-top: 1px solid #3b5065; padding-top: .95em; }
+    @media (prefers-color-scheme: light) { :root {color-scheme: light;} body {background: #ffffff; color: #172332; } h1,h2 { color: #17446b; } strong { color: #172332; } a { color: #075fa7; } }
+  </style>
 </head>
 <body>
 <main>
 <h1>CronPilot – Privacy Policy</h1>
-<p><strong>Last updated:</strong> November 6, 2026<br />
-<strong>Developer:</strong> SAGM Software<br />
-<strong>Privacy and support contact:</strong> <a href="mailto:support@sagm.net">support@sagm.net</a><br />
-<strong>Project information:</strong> https://github.com/SAGMSoftware</p>
-<h2>1. Information accessed and stored on the device</h2>
-<p>CronPilot accesses foreground device location only with the user's permission while GPS recording is active. Coordinates, groundspeed, ground track, reported location accuracy, fix times and track points are used for the track plotter, flight-event timing, nearby navigation references and the position-report display. Retained tracks, timer values, display preferences and pairing settings are stored locally on the Android device.</p>
-<p>CronPilot does not require an account or login. The inspected Android application contains no advertising, dedicated analytics or in-app payment SDKs. SAGM Software does not operate a server that receives users' GPS tracks. Android, the device manufacturer and services selected by the user may separately handle location, diagnostics or backups under their own terms.</p>
+<p><strong>Last updated:</strong> November 13, 2026<br />
+<strong>Developer and privacy contact:</strong> SAGM Software — <a href="mailto:support@sagm.net">support@sagm.net</a><br />
+<strong>Project information:</strong> <a href="https://github.com/SAGMSoftware">https://github.com/SAGMSoftware</a></p>
+<h2>1. Location data and information stored on your device</h2>
+<p>CronPilot accesses the device's physical GPS location only after you grant the required Android location permission and start GPS recording using <strong>REC START</strong>. Physical GPS updates are requested only while CronPilot is active in the foreground. Recording stops when you leave the app; CronPilot does not request background location access.</p>
+<p>During active GPS recording, coordinates, groundspeed, ground track, reported location accuracy, fix times and track points are used to provide the track plotter, flight-event timing, nearby navigation references, magnetic-variation calculations and the position-report display. The app stores retained tracks, timer values, display preferences and simulator pairing settings locally on your Android device. Simulated aircraft positions received through the optional SIM connection are separate from physical GPS measurements.</p>
+<p>CronPilot does not require an account or login. The inspected application does not contain advertising, dedicated analytics or in-app payment SDKs. SAGM Software does not operate a server that automatically receives your GPS tracks. Android, your device manufacturer and services you choose may separately process location information, diagnostics or backups under their own terms.</p>
 <h2>2. Optional GPX export</h2>
-<p>Users may choose to export retained tracks as GPX files. Export happens only after the user selects a destination with Android's file picker. GPX files can include coordinates and UTC timestamps. The selected destination or any app receiving the exported file may process that information. CronPilot cannot delete previously exported copies; users must remove those separately.</p>
-<h2>3. Navigation database updates</h2>
-<p>The bundled airport and radio-navigation reference database works offline. If the user explicitly requests a NAV update, CronPilot downloads a public OurAirports-derived reference file from GitHub Releases over HTTPS. CronPilot does not intentionally include current GPS coordinates or saved tracks in this request. GitHub may nevertheless receive technical connection details, including an IP address and HTTP request metadata. GitHub's privacy statement: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</p>
+<p>You can export saved tracks as GPX files by choosing a destination through Android's file picker. Exported files may contain coordinates and UTC timestamps. The destination or receiving app you select may process that information under its own privacy practices. CronPilot cannot delete copies that you previously exported; you must remove those separately.</p>
+<h2>3. Optional navigation database updates</h2>
+<p>The bundled airport and radio-navigation reference database can be used offline. Only when you select <strong>UPDATE NAV DATA</strong> does CronPilot download a public reference file derived from OurAirports data from GitHub Releases over HTTPS.</p>
+<p>The download request does not contain your current GPS coordinates or saved tracks. However, GitHub and its download infrastructure may receive technical connection data, such as your IP address, request time and HTTP user-agent. GitHub's processing, retention and any international transfers of this information are described in its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. SAGM Software does not receive your GPS tracks through this update feature.</p>
+<p>Opening this Privacy Policy on GitHub Pages also involves a connection to GitHub's hosting infrastructure, which may process technical connection information.</p>
 <h2>4. Optional Microsoft Flight Simulator connection</h2>
-<p>CronPilot can connect to a Windows PC running CronPilot Sim Bridge, if the user chooses to enable it. The local network connection exchanges device identification, pairing and authentication information, connection metadata and simulated aircraft telemetry. The Android app protects its locally stored trusted-device secret using Android Keystore and excludes it from the configured Android backups. The Windows computer also holds a trusted-device record.</p>
-<p><strong>The local network connection is not protected by TLS encryption.</strong> Use this feature only on a trusted private network. Do not use public Wi-Fi or expose the Bridge through router port forwarding.</p>
-<h2>5. Retention, deletion and Android backups</h2>
-<p>Locally retained tracks and other application data remain until the user clears them or removes the app's local storage. The CLEAR TRACK action removes stored track data inside CronPilot. Files previously exported to other locations are not removed by this action or by uninstalling the app.</p>
-<p>Users can forget the saved SIM pairing credential on the Android phone. To fully revoke an authorized device, its trusted-device entry must also be removed in CronPilot Sim Bridge on Windows. Uninstalling CronPilot removes its private local storage, subject to Android backup and restore behavior. Track files and pairing secrets are excluded by the app's configured backup rules; certain settings may be included in the device's normal backup services.</p>
-<h2>6. Permissions and safety</h2>
-<p>CronPilot uses permissions for foreground precise or approximate location, Internet access for optional NAV updates and SIM networking, and vibration for application alerts. It does not require background location access.</p>
-<p>CronPilot is not a certified aviation navigation or emergency instrument. Community-maintained OurAirports data and calculated magnetic variation may be incomplete or inaccurate. Do not rely on CronPilot for safety-critical flight decisions.</p>
-<h2>7. Contact and policy changes</h2>
-<p>For privacy questions or requests, contact SAGM Software at the support email listed above. This policy may be updated when CronPilot changes; the publication date on this page will be revised accordingly.</p>
+<p>If you enable the SIM feature, CronPilot can connect to your chosen Windows PC running CronPilot Sim Bridge. The connection uses your local network to exchange device identification, pairing and authentication information, connection metadata and simulated aircraft telemetry.</p>
+<p>The Android app protects its locally stored trusted-device secret using Android Keystore and excludes it from the configured Android backups. The Windows computer also stores a trusted-device record.</p>
+<p><strong>This local network connection is not protected by TLS encryption.</strong> Use it only on a trusted private network. Do not use public Wi-Fi or expose the Bridge through router port forwarding.</p>
+<h2>5. Retention, deletion and backups</h2>
+<p>Saved tracks and other local application data remain on your device until you clear them or remove the app's local storage. <strong>CLEAR TRACK</strong> removes retained track data stored within CronPilot. Files exported to other destinations are not removed by this action or by uninstalling the app.</p>
+<p>You can forget a saved SIM pairing credential on the Android device. To fully revoke an authorized device, also remove its trusted-device entry in CronPilot Sim Bridge on Windows.</p>
+<p>Uninstalling CronPilot removes its private local storage, subject to Android backup and restore behavior. Track files and pairing secrets are excluded by the app's configured backup rules; some settings may be included in normal device backups. The retention of information by GitHub, a GPX export destination, an email service or a device backup provider is governed by the relevant provider's practices.</p>
+<p>If you contact SAGM Software by email, we use the email address and information you provide to handle your inquiry. Support correspondence is kept only for as long as reasonably necessary to address the request and meet applicable legal obligations. Please do not send GPS tracks or other sensitive information in support messages unless needed for your request.</p>
+<h2>6. Permissions and aviation safety</h2>
+<p>CronPilot uses Android permissions for foreground precise or approximate location, Internet access for optional NAV updates and SIM networking, and vibration for alerts. You can deny or revoke location permission in Android settings, but GPS-dependent features will then be unavailable. You may use the app's other functions without enabling GPS recording, NAV downloads or SIM connectivity.</p>
+<p>CronPilot is not a certified aviation navigation or emergency instrument. Community-maintained OurAirports references and calculated magnetic variation can be incomplete or inaccurate. Do not rely on CronPilot for safety-critical flight decisions.</p>
+<h2>7. Purposes and legal bases under the GDPR</h2>
+<p>Where the EU General Data Protection Regulation (GDPR) applies and SAGM Software is responsible for processing personal data, our legal bases are:</p>
+<ul>
+<li><strong>Legitimate interests (Article 6(1)(f) GDPR):</strong> providing the app functions you choose to use, maintaining basic application security and responding to support inquiries. These interests concern delivering the requested functionality and helping users; they do not include advertising or profiling.</li>
+<li><strong>Compliance with legal obligations (Article 6(1)(c) GDPR):</strong> handling legally required privacy requests and retaining information where applicable law requires it.</li>
+</ul>
+<p>The Android location-permission prompt is a device-level control. It does not authorize unrelated use of your location. GPS recording, NAV downloads, GPX exports and SIM connections are initiated by your choices. Providing a GPS location, downloading NAV data or establishing a SIM connection is not a legal requirement; choosing not to do so limits only the corresponding functions.</p>
+<p>GitHub and other independently selected services may determine their own purposes and legal bases for the technical data they process. Refer to their privacy information for details, including any transfers outside the European Economic Area and applicable safeguards.</p>
+<p>CronPilot does not use personal data for automated decisions producing legal or similarly significant effects, and it does not perform advertising profiling.</p>
+<h2>8. Your privacy rights</h2>
+<p>Where applicable law provides these rights, you may request access to, correction of, deletion of or restriction of processing of personal data held by SAGM Software. You may also object to processing based on legitimate interests and request data portability where the relevant conditions are met. If any processing is based on consent, you may withdraw that consent at any time without affecting prior lawful processing.</p>
+<p>To exercise your rights or ask a privacy question, contact <strong><a href="mailto:support@sagm.net">support@sagm.net</a></strong>. Because SAGM Software does not receive your locally stored GPS tracks automatically, we generally cannot view, correct or delete those tracks on your device or remove copies held by third parties. You can manage local tracks using the app and Android's storage controls.</p>
+<p>You also have the right to lodge a complaint with a competent data-protection supervisory authority. A list of European authorities is available from the <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en">European Data Protection Board</a>.</p>
+<h2>9. Changes to this policy</h2>
+<p>SAGM Software may update this policy if CronPilot's features, data handling or legal obligations change. The <strong>Last updated</strong> date at the top of this page identifies the current revision. Privacy and support inquiries can be sent to the contact address above.</p>
+
 </main>
 </body>
 </html>
